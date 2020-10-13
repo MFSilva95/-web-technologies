@@ -1,0 +1,155 @@
+html{
+	background-image:url("../imgs/mad11.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#titleImg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -215px; /* Half the width */
+	margin-top: -300px;
+}
+
+#sobre{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0066cc;
+}
+
+#config{
+	text-align:center;
+	color:black;
+}
+
+
+.container1 { /*loginform jogador + sobre */
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	align-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -9em;
+	margin-left: -15em;
+	width:30em;
+	height:18em;
+	/* opacity: 0.8; */
+	border: 1px solid #ccc;
+	background-color: #F7F7F7;
+	border: 3px solid #000000;
+}
+
+.container2 { /* configuraçoes */
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	align-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -12em;
+	margin-left: -15em;
+	width:30em;
+	height:24em;
+	/* opacity: 0.8; */
+	border: 1px solid #ccc;
+	background-color: #F7F7F7;
+	border: 3px solid #000000;
+}
+
+.container3 { /*jogo*/
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	align-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -11em;
+	margin-left: -20em;
+	width:40em;
+	height:25em;
+	/* opacity: 0.8; */
+	border: 1px solid #ccc;
+	background-color: #F7F7F7;
+	border: 3px solid #000000;
+}
+
+
+
+.submit{
+	background:#6699ff;
+	color:#000000;
+	padding: 10px 15px;
+}
+
+.topnav {
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+    background-color: #333;
+    overflow: hidden;
+/*		float: left;*/
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.topnav a.active {
+    background-color: #0066cc;
+    color: white;
+}
+
+#scoreTable, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+		background-color: #FFFFFF;
+	  margin-left:330px; /* half of width */
+	  margin-top:50px;  /* half of height */
+}
+th, td {
+    padding: 7px;
+    text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		color: #000000;
+}
+
+
+
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	display: block;
+}

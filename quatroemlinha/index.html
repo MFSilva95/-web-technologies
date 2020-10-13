@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+	<meta charset="utf-8"/>
+	<title> 4 em Linha </title>
+
+	<link href ="css/sstyle.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+	<img src="imgs/titulo.png" alt="titulo" id = "titleImg" style = "display: block"/>
+<!-- barra de navegação-->
+	<div class="topnav" id = "barra" style = "display: none">
+		<a class="inactive" id="jogarBtn" onclick="startGame()">Jogar!</a>
+		<a class="inactive" id="configBtn" onclick="showConfig()">Configurações</a>
+		<a class="active" id="aboutBtn" onclick="showAbout()">Sobre</a>
+		<a class="inactive" id="scoreBtn" onclick="showScore()">Classificações</a>
+		<a style="float:right" id="logoutBtn" onclick="logout()"> Sair </a>
+	</div>
+
+<!-- login de cada jogador-->
+
+	<div>
+		<form id="loginForm" class = "container1" style = "display: block">
+			<br>
+			<br>
+			<br>
+			Username:<br>
+			<input type="text" placeholder="Username" name = "user" id = "muser">
+			<br>
+			Password:<br>
+			<input type="password" placeholder="Password" name = "psw" id = "mpsw">
+			<br><br>
+	    <button type='button' onclick="inputCheck()" class = "submit"> Login </button>
+		</form>
+	</div>
+
+	<!--Sobre/Instruções-->
+	<div id = "sobre" class = "container1" style = "display: none">
+		<br><br><br><br>
+		As regras do quatro em linha são muito simples.<br>
+		Joga-se sempre entre 2 jogadores e sobre um tabuleiro de 7x6 espaços. <br>
+		Em cada turno cada jogador coloca uma ficha da sua cor numa coluna e esta cai até à primeira casa disponível.<br/>
+		O que conseguir colocar 4 fichas da mesma cor seguidas na horizontal, vertical ou diagonal ganha.<br/>
+		Se ninguém conseguir a partida termina em empate.<br>
+	</div>
+
+	<div id = "emparelha" class = "container1" style = "display: none">
+		<br><br><br><br><br><br>
+		<h2> À procura de adversário... </h2>
+	</div>
+
+	<div id="config" class = "container2" style = "display: none">
+		<p> <strong> Tamanho do tabuleiro </strong> </p>
+		<form name = "configuration">
+			<input type="radio" name="size" value='1' checked>7x6<br>
+			<input type="radio" name="size" value='2'>9x7<br>
+		<p> <strong> 1 ou 2 Jogadores </strong> </p>
+			<input type="radio" name="opponent" value='1' checked>Vs. Computador<br>
+			<input type="radio" name="opponent" value='2'>Vs. Jogador<br>
+		<p> <strong> Dificuldade </strong> </p>
+			<input type="radio" name="dificulty" value='1' checked>Fácil<br>
+			<input type="radio" name="dificulty" value='2'>Médio<br>
+			<input type="radio" name="dificulty" value='3'>Difícil<br>
+		</form>
+		<br>
+		<button type='button' onclick="saveConfig()" > Gravar </button>
+
+	</div>
+	<!--Classificações-->
+
+	<div id = "score" style = "display: none">
+		<table id = 'scoreTable' style="width:50% ">
+
+			<!-- <h1> Classificações </h1>  Vitoria 3 pts empate 1 pts derrota 0pts-->
+			<tr>
+				<th>Jogador</th>
+				<th>Vitórias</th>
+				<th>Derrotas</th>
+				<th>Empates</th>
+				<th>Pontos</th>
+			</tr>
+			<tr>
+				<td>XPTO</td>
+				<td>5</td>
+				<td>0</td>
+				<td>1</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>OTPX</td>
+				<td>0</td>
+				<td>5</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div id = "game" style = "display: none">
+		<div class="topnav" id = "barra2" style = "display: none">
+			<a class="active" id = "retornar" onclick="comeBack()">Jogo</a>
+			<a class="inactive" id="instruct" onclick="instructions()">Instruções</a>
+			<a style="float:right" id="quitbtn" onclick="quit()"> Desistir / Sair </a>
+		</div>
+	</div>
+
+
+</body>
+<head>
+	<script src="js/multiplayer.js"></script>
+	<script src="js/menus.js"></script>
+	<script src="js/4linha.js"></script>
+</head>
+</html>
