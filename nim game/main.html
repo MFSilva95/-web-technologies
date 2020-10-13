@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title> Nim Game </title>
+	<script src="menu.js"></script>
+	<link href = "stylesheet.css" type="text/css" rel="stylesheet"/>
+		
+</head>
+
+<!-- Pagina inicial e Configurações -->
+
+<body>
+	<div id = "title" class="container">
+		<img src = "title.png" alt="main.html"/>
+	</div>
+	<div id = "sair">
+		<span>
+		<a href="main.html"> 
+		<img id="sairimg" src="sairrr.png" width="50" height="50" alt=""/></a>
+		</span>
+		<fieldset>
+			<legend> Logout </legend> 	
+		</fieldset>
+	</div>
+	
+    <div id = "inputStuff"  >
+      <p> <input id = "user" type = "text" placeholder = "Inserir nome de utilizador" pattern="[a-z0-9]" maxlength=20 /></p>
+			<p> <input id = "pwd" type = "password" placeholder = "Inserir palavra-passe" pattern="[a-z0-9]" maxlength=30 /></p>
+      <p><button class ="submeter" onclick = "Transition()"> <strong> Começar </strong> </button></p>
+    </div>
+
+    <div id = "config" hidden = "hidden">
+      <p> <strong> Tamanho do tabuleiro </strong> </p>
+      <form>
+        <input type="radio" name="tamanho" value="10">10 Peças<br>
+        <input type="radio" name="tamanho" value="15">15 Peças<br>
+        <input type="radio" name="tamanho" value="21">21 Peças<br>
+      </form>
+      <p> <strong> 1 ou 2 Jogadores </strong> </p>
+      <form>
+        <input type="radio" name="njogadores" value="1jog" checked = "checked">1 Jogador<br>
+        <input type="radio" name="njogadores" value="2jog" disabled>2 Jogador<br>
+      </form>
+      <p> <strong> Dificuldade </strong> </p>
+      <form>
+        <input type="radio" name="dificuldade" value="easy" disabled>Fácil<br>
+        <input type="radio" name="dificuldade" value="hard" checked = "checked">Difícil<br>
+      </form>
+      <p> <button class = "submeter" id ="submeterConfig" onclick = "checkRadios()"> <strong> Submeter </strong> </button></p>
+    </div>
+
+<!--  Menu Horizontal -->
+
+  <div class="topnav" id="myTopnav" hidden = "hidden">
+    <a onclick="TransitionInst()">Instruções</a>
+    <a onclick="TransitionConfig()">Configurações</a>
+    <a onclick="TransitionClassifica()">Classificações</a>
+    <a onclick="TransitionJogar()">Jogar</a>
+  </div>
+
+<!-- Instruções -->
+
+  <div id = "instrucoes" hidden = "hidden">
+    <h3> O Nim é um jogo matemático de estratégia em que dois jogadores alternadamente removem objetos (contas, grãos, fosforos) de diferentes pilhas.
+      A cada jogada, o jogador deve remover pelo menos um objeto de um pilha e todos os objetos removidos devem pertencer à mesma pilha.
+      O objetivo do jogo é remover o último objeto.
+      (Alternativamente, o objetivo pode ser evitar tirar o último objeto - "à lá misére"). </h3>
+  </div>
+
+<!-- Classificações -->
+
+  <div class="table" id = "classifica" hidden = "hidden">
+    <table style="width:100%">
+      <tr>
+        <th>Lugar</th>
+        <th>Nome de utilizador</th>
+        <th>Jogadas</th>
+        <th>Tempo</th>
+     </tr>
+
+    <tr>
+		<th> 1º </th>
+    </tr>
+    <tr>
+       <th> 2º </th>
+    </tr>
+    <tr>
+       <th> 3º </th>
+    </tr>
+   </table>
+  </div>
+
+<!-- Jogo -->
+
+<div id = "jogo" hidden = "hidden">
+    <span id="game"></span>
+    <span id="player"></span>
+</div>
+
+</body>
